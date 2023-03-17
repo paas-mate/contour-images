@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save kube-ovn
         run: docker pull ghcr.io/projectcontour/contour:v1.23.2; docker save ghcr.io/projectcontour/contour:v1.23.2 -o contour.tar.gz
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      - uses: dev-drprasad/delete-tag-and-release@v0.2.1
         with:
           delete_release: true
           tag_name: v1.23.2
